@@ -1,0 +1,604 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    --open-sans-font: 'Open Sans', sans-serif;
+
+    --white-smoke: #f5f5f5;
+    --body-bg: var(--white-smoke);
+    --white: #ffffff;
+    --red: #da0000;
+    --orange: #e17d22;
+
+    --text-color: #323438;
+    --gray-text: #b7b5b5;
+    --secondary-text: #273549;
+
+    --header-bg: #141922;
+    --hero-bg: #242f3e;
+    --primary-btn-color: #0f1111;
+    --primary-btn-bg: #ffa41c;
+    --primary-btn-bg-hover: #feaf37;
+
+    --faq-color: #474747;
+
+    --footer-bg: #292e3b;
+    --footer-text: #b7b7b7;
+}
+
+body {
+    position: relative;
+    font-family: var(--open-sans-font);
+    background-color: var(--body-bg);
+    color: var(--text-color);
+}
+button:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.container-xxl {
+    max-width: 1232px;
+    padding: 0 1rem;
+}
+
+.text-secondary {
+    color: var(--gray-text);
+}
+
+.text-red {
+    color: var(--red);
+}
+
+h3 {
+    font-size: 21px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 23px;
+    text-decoration: underline;
+}
+
+/* ============= Header Section Start ============ */
+header {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-color: var(--header-bg);
+    z-index: 20;
+}
+.logo {
+    max-width: 220px;
+    height: auto;
+}
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+/* ============= Header Section End ============ */
+
+/* ============= Hero Section Start ============ */
+.hero {
+    padding-top: 74px;
+    background-color: var(--hero-bg);
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+}
+
+.hero-content {
+    padding-bottom: 13.8%;
+}
+
+.hero-title {
+    text-align: center;
+    font-size: clamp(25px, 3vw, 42px);
+    line-height: clamp(37px, 5.16667vw, 56px);
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 32px;
+}
+
+.hero-btn {
+    max-width: 423px;
+    border-radius: 10px;
+    background-color: var(--primary-btn-bg);
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--primary-btn-color);
+    line-height: 23px;
+    padding: 16px 28px;
+}
+
+.hero-btn:hover {
+    background-color: var(--primary-btn-bg-hover);
+}
+
+.hero-text {
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+    max-width: 490px;
+}
+
+.sale-circle {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    z-index: 2;
+}
+
+.sale-circle h5,
+.sale-circle h2 {
+    text-transform: uppercase;
+    font-family: 'Open Sans Condensed';
+    font-weight: 500;
+    font-size: clamp(8px, 1vw, 18px);
+    letter-spacing: 0;
+    line-height: clamp(18px, 1vw, 30px);
+    text-align: center;
+    margin-bottom: 2px;
+}
+
+.sale-circle h2 {
+    font-weight: 700;
+    font-size: clamp(24px, 2.5vw, 56px);
+    line-height: clamp(30px, 3.5vw, 40px);
+}
+
+@media (max-width: 1429.98px) {
+    .hero-image {
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .hero-content {
+        padding-top: 32px;
+        padding-bottom: 20%;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .sale-circle h2 {
+        line-height: clamp(20px, 3vw, 30px);
+    }
+}
+
+@media (max-width: 767.98px) {
+    .hero-btn {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .hero-btn {
+        font-size: 16px;
+        padding: 14px 16px;
+    }
+    .sale-circle h2 {
+        font-weight: 700;
+        font-size: clamp(20px, 2vw, 26px);
+    }
+}
+
+@media (max-width: 475.98px) {
+    .sale-circle h2 {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1;
+    }
+}
+/* ============= Hero Section End ============ */
+
+/* ============= Ranking Sections  Start ============ */
+.first-ranked {
+    padding-top: 90px;
+    padding-bottom: 45px;
+}
+
+.first-ranked__report {
+    max-width: 260px;
+    height: auto;
+}
+
+.ranked-section {
+    padding: 45px 0;
+}
+
+.ranking {
+    position: relative;
+    border: 2px solid var(--hero-bg);
+    border-radius: 10px;
+    background-color: var(--white);
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.02);
+    background-color: var(--white);
+    padding: 56px 50px;
+    padding-bottom: 0;
+}
+
+.ranking__rank {
+    color: var(--white);
+    background: var(--hero-bg);
+    font-size: 27px;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 32px;
+    padding: 2px 0;
+    text-align: center;
+    text-transform: uppercase;
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    height: 56px;
+    width: 69px;
+    border-radius: 6px 0 10px 0;
+}
+
+.ranking__rank-num {
+    color: var(--primary-btn-bg);
+}
+
+.ranking__rank-text {
+    font-size: 11px;
+    line-height: 13px;
+    letter-spacing: 2.38px;
+    font-weight: 500;
+    display: block;
+}
+
+.ranking__info {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    bottom: 0;
+}
+
+.ranking__info-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    background-color: var(--secondary-text);
+    border-radius: 0 0 19px 19px;
+    width: 176px;
+    font-size: 15px;
+    color: var(--white);
+    line-height: 12px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.ranking__info-btn img {
+    line-height: 1;
+    transform: rotate(180deg);
+    transition: all 0.25s ease;
+}
+
+.ranking__card {
+    padding: 0 28px;
+}
+
+.ranking__card-logo {
+    max-width: 208px;
+}
+
+.ranking-rating {
+    font-size: 14px;
+    letter-spacing: 0.6px;
+    line-height: 20px;
+    margin-top: 10px;
+    margin-bottom: 4px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.ranking-rating span {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.ranking-checks p {
+    font-size: 17px;
+    letter-spacing: 0;
+    line-height: 34px;
+}
+
+.ranking__sale-text {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-transform: capitalize;
+    color: var(--white);
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.sale-wrapper {
+    max-width: 405px;
+}
+
+.ranking-sale h2 {
+    text-transform: uppercase;
+    font-size: clamp(16px, 3.7594vw, 20px);
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: clamp(18px, 3.7594vw, 23px);
+}
+
+.ranking-sale p {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.ranking-sale-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 58px;
+    border-radius: 10px;
+    background-color: var(--primary-btn-bg);
+    color: var(--primary-btn-color);
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+    text-decoration: none;
+    margin-top: 12px;
+    transition: all 0.3s ease;
+}
+
+.ranking-sale-btn img {
+    width: 20px;
+    height: auto;
+    margin-left: 6px;
+    margin-bottom: 4px;
+}
+
+.ranking-sale-btn:hover {
+    background-color: var(--primary-btn-bg-hover);
+}
+
+.ranking-sale-link {
+    display: block;
+    text-align: center;
+    color: var(--secondary-text);
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 23px;
+    text-decoration: underline;
+    margin-top: 20px;
+}
+
+.varified-review {
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    background: var(--white);
+    padding: 0 10px;
+}
+
+.varified-review p {
+    color: var(--orange);
+    font-size: 16px;
+    padding: 0 6px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.ranking-review-card {
+    padding-bottom: 35px;
+}
+
+.ranking-review-card h5 {
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 0;
+}
+
+.ranking-review-card img {
+    max-width: 160px;
+    margin: 12px 0;
+}
+.ranking-review-card p {
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 4px;
+    margin-bottom: 0;
+}
+
+.customer-review p {
+    color: var(--orange);
+    padding: 0 6px;
+    font-weight: 600;
+}
+
+.review-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.review-list li {
+    margin-bottom: 28px;
+}
+
+.review-list li:last-child {
+    margin-bottom: 60px;
+}
+
+.review-list li h5 {
+    font-size: 18px;
+    margin-top: 28px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.review-list li p {
+    font-size: 16px;
+    line-height: 23px;
+    margin-bottom: 6px;
+}
+
+@media (max-width: 1199.98px) {
+    .first-ranked__report {
+        max-width: 220px;
+    }
+    .ranking {
+        padding: 56px 20px;
+        padding-bottom: 0;
+    }
+
+    .ranking__card {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .first-ranked__report {
+        max-width: 180px;
+    }
+    .ranking {
+        padding: 56px 12px;
+        padding-bottom: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .first-ranked__report {
+        max-width: 160px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .first-ranked__report {
+        max-width: 120px;
+    }
+}
+/* ============= Ranking Sections   End ============ */
+
+/* ============= FAQ Section Start ============ */
+.faq-section {
+    background-color: var(--white);
+    padding: 70px 0;
+    margin-top: 45px;
+}
+
+.faq-section-title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--secondary-text);
+    line-height: 44px;
+    margin-bottom: 30px;
+}
+
+.faq-btn {
+    color: var(--faq-color);
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 20px;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+}
+.accordion-button:not(.collapsed) {
+    background-color: transparent;
+    color: var(--faq-color);
+    box-shadow: none;
+}
+
+.accordion-button::after,
+.accordion-button:not(.collapsed)::after {
+    display: none;
+}
+
+.accordion-button:not(.collapsed)::before {
+    background-image: url('./assets/icons/arrow-dark.svg');
+    transform: rotate(180deg) translateY(4px);
+}
+.accordion-button::before {
+    position: absolute;
+    left: 0;
+    top: 28px;
+    content: '';
+    width: 16px;
+    height: 16px;
+    background-image: url('./assets/icons/arrow-dark.svg');
+    background-repeat: no-repeat;
+    background-size: 16px;
+    transition: 0.2s ease-in-out;
+}
+
+.accordion-flush .accordion-collapse {
+    border: none;
+}
+
+.faq-body {
+    color: var(--faq-color);
+    font-size: 16px;
+    line-height: 23px;
+    padding: 2px 31px 20px 31px;
+}
+
+@media (max-width: 767.98px) {
+    .faq-btn {
+        font-size: 16px;
+    }
+}
+/* ============= FAQ Section End ============ */
+
+/* ============= Footer Start ============ */
+footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 15px 16px;
+}
+
+.footer-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-list li a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--white);
+    padding: 0 8px;
+}
+
+.footer-list li a::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    right: 0;
+    width: 2px;
+    height: 14px;
+    background-color: var(--footer-text);
+}
+
+.footer-list li:last-child a::after {
+    display: none;
+}
+
+@media (max-width: 575.98px) {
+    footer {
+        font-size: 14px;
+        padding: 15px 0px;
+    }
+}
+/* ============= Footer  End ============ */
